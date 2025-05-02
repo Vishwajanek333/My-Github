@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navigation bar</title>
+  </head>
+  <style>
+    body{
+        font-family:arial,sans serirf;
+        margin:0px;
+        padding :20px;
+        background-color: #c8a9a9;
+        color: black;
+    }
+    .nav-containter{
+       margin-bottom:10px ;
+
+    }
+    h2{
+        margin-bottom: 0px;
+      
+    }
+    .nav-bar1{
+        background-color:rgb(240, 238, 239);
+        padding:10px;
+        border-radius: 20px; /* round the corners of the list */
+
+    }
+    .nav-bar1 ul{
+        list-style-type:none;  /* remove bullet points from list items */
+        margin:0px; 
+        padding:0px;
+        display:flex; /* display list items in a row */
+        justify-content: space-between;
+    }
+    .nav-bar1 li{
+        display: inline; /* display list items in a row */
+    
+    }
+    .nav-bar1 a{
+        text-decoration: none;
+        color: rgb(20, 19, 19); /* remove underline from links */
+        background-color: #f1f0f0;
+        padding:5px 10px;
+        position: relative; /* position the link relative to its parent */
+    }
+    .nav-bar1 button{
+        background-color: rgb(11, 200, 68);
+        padding:10px 20px;
+        color: white;
+        boder: none;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    .nav-bar1 a::after{
+        content:"";/* add a pseudo element after the link */
+        position: absolute; /* position it absolutely from parent  "a" */
+        bottom: 0px;
+        height:3px;
+        width: 100px;
+        left:0;
+        background-color: rgb(51, 19, 99); /* color of the underline */
+        bottom:0;
+        transform: scaleX(0); /* hide the underline by default */
+        transition: transform 0.3s ease; /* add a transition effect */
+    }
+    .nav-bar1 a:hover::after{
+        transform: scaleX(1); /* show the underline on hover */
+    }
+    .nav-bar2{
+        border:2px solid #565656;
+    
+        background-color: #eeeaea;
+        width: 200px;
+        height:100px;
+    }
+    .nav-bar2 ul{
+        list-style-type:none;  /* remove bullet points from list items */
+        margin:0px; 
+        padding:0px;
+        
+     
+    }
+    .nav-bar2 li{
+        margin-bottom: 2px;
+    }
+  </style>
+  <body>
+    <div class ="nav-containter">
+        <h2> Variation 1:Horizontal with underline effect</h2>
+        <nav class="nav-bar1">
+            <ul>
+                <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><button>login</button></li>
+            </ul>
+        </nav> 
+    </div>
+
+    <div class ="nav-containter">
+        <h2> Variation 2:Horizontal with background color</h2>
+        <nav class="nav-bar2">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class ="nav-containter">
+        <h2> Variation 3:Vertical with background color</h2>
+        <nav class="nav-bar3">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+
+  </body>
+</html>
